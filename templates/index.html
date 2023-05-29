@@ -1,0 +1,280 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Forty by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+
+
+	</head>
+	<body class="is-preload"  style="background-color:#2a2f4a;">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+<header id="header" class="alt" style="background-color:blue;">
+<a href="index.html" class="logo">
+  <span style="font-family: 'Arial', sans-serif; font-weight: bold; font-size: 24px; color: white; text-decoration: none;">C O N N E C T</span>
+</a>
+  <ul class="navbar-nav ml-auto" style="display: flex; align-items: center; margin-top:30px; margin-left:500px; list-style: none;">
+    <li class="nav-item"><a href="#" class="nav-link" style="margin-left:70px;">Home</a></li>
+    <li class="nav-item"><a href="login" class="nav-link" style="margin-left:70px;">Login</a></li>
+    <li class="nav-item"><a href="register" class="nav-link" style="margin-left:70px;">Register</a></li>
+    <li class="nav-item"><a href="#" class="nav-link" style="margin-left:70px;">Logout</a></li>
+  </ul>
+</header>
+
+				<!-- Menu -->
+
+
+				<!-- Banner -->
+<div class="video-container">
+  <div class="video">
+    <video autoplay loop muted>
+      <source src="{% static 'in.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+  <div class="text-overlay">
+    <section id="banner" class="inner">
+      <header class="major">
+        <h1>Employee Management System</h1>
+      </header>
+      <div class="content">
+        <p class="paragraph">Optimize employee management processes<br>in the office environment for improved productivity and organizational effectiveness.</p>
+        <ul class="actions">
+          <li><a href="#one" class="button next scrolly">Get Started</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+  .video-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .video {
+    position: relative;
+  }
+
+  .video video {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+
+  .text-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    white-space: nowrap;
+  }
+
+  .text-overlay .paragraph {
+    font-size: 18px;
+    margin-top: 12px;
+    white-space: normal;
+  }
+
+  .text-overlay .actions {
+    margin-top: 20px;
+  }
+
+  .text-overlay .actions li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+</style>
+
+
+
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="{% static 'b.jpeg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="all_emp" class="link">View</a></h3>
+										<p>View Employee Details</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static 'b2.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="add_emp" class="link">Add</a></h3>
+										<p>Add Employee Details</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static 'b1.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="remove_emp" class="link">Remove</a></h3>
+										<p>Remove Employee Details</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static '2.jpeg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="filter_emp" class="link">Filter</a></h3>
+										<p>Filter Employee Details</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static '5.jpeg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="https://www.pexels.com/" class="link">Gallery</a></h3>
+										<p>Ipsum dolor sit amet</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static 'l.jpg' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="https://blog.feedspot.com/indian_technology_blogs/" class="link">Blog</a></h3>
+										<p>Feugiat amet tempus</p>
+									</header>
+								</article>
+							</section>
+
+						<!-- Two -->
+<!--							<section id="two">-->
+<!--								<div class="inner">-->
+<!--									<header class="major">-->
+<!--										<h2>Massa libero</h2>-->
+<!--									</header>-->
+<!--									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>-->
+<!--									<ul class="actions">-->
+<!--										<li><a href="landing.html" class="button next">Get Started</a></li>-->
+<!--									</ul>-->
+<!--								</div>-->
+<!--							</section>-->
+
+					</div>
+
+				<!-- Contact -->
+				<div style="background-image: url('{% static "m.jpeg" %}');">
+<div>
+  <section id="contact" style="margin-left: 200px;">
+    <div class="inner">
+      <div class="row">
+        <div class="column" style="display: flex;">
+          <div style="flex: 1;">
+            <section>
+              <form method="post" action="#">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="name">Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" name="name" id="name" required style="border: 1px solid #ccc; padding-right: 200px;">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" name="email" id="email" required style="border: 1px solid #ccc;">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message <span class="text-danger">*</span></label>
+                  <textarea class="form-control" name="message" id="message" rows="6" required style="padding-right: 220px;"></textarea>
+                </div>
+                <a href="msg" class="btn btn-primary">Send Message</a><span><button type="reset" class="btn btn-secondary">Clear</button></span>
+
+              </form>
+            </section>
+          </div>
+          <div style="flex: 1;">
+            <section>
+              <div class="contact-method" style="margin-left:200px;">
+                <span class="icon solid alt fa-envelope"></span>
+                <h3>Email</h3>
+                <a href="#">information@untitled.tld</a>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method" style="margin-left:200px;">
+                <span class="icon solid alt fa-phone"></span>
+                <h3>Phone</h3>
+                <span>(000) 000-0000 x12387</span>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method" style="margin-left:200px;">
+                <span class="icon solid alt fa-home"></span>
+                <h3>Address</h3>
+                <span>1234 Somewhere Road #5432<br />
+                  Nashville, TN 00000<br />
+                  United States of America</span>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+
+
+				<!-- Footer -->
+					<footer id="footer" style="height: 50px;">
+						<div class="inner" >
+							<ul class="icons">
+<!--								<li><a href="" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>-->
+								<li><a href="https://www.facebook.com/nikhil.mr.9" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/__nikhil_m_r/?igshid=OTk0YzhjMDVlZA%3D%3D" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/Nikhil-MR2001" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/nikhil-m-r-8ab325208/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="">Nikhil MR</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

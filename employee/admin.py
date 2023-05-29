@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Employee,Role,Department
+from .models import Employee, Role, Department
 
 # Register your models here.
 
