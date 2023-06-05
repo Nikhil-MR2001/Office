@@ -1,26 +1,89 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+    }
+  </style>
 </head>
-<body>
-<h1>login</h1>
-<form action="login" method="post">
-    {% csrf_token %}
-<label>UserName: </label>
-<input type="text" value="username" name="uname"><br>
+<body style="background-image: url('{% static 'pic.jpeg' %}');background-repeat: no-repeat;
+             background-size: cover; -webkit-backdrop-filter: blur(5px);
+             backdrop-filter: blur(5px); height: 850px; color: white;">
+  <div class="container">
+    <h1>LOGIN</h1>
+<form action="/login" method="post" class="my-4 p-4 rounded shadow-lg box" style="background-color: transparent; border: 1px solid rgba(255, 255, 255, 0.5); margin: 0 auto; max-width: 600px; padding: 40px; display: flex; flex-direction: column; align-items: center;">
+  {% csrf_token %}
 
-<label>PassWord: </label>
-<input type="password" value="password" name="psswrd"><br>
+  <div style="display: flex; flex-direction: column;">
+<label for="uname" style="text-align: left; margin-bottom: 5px; font-size: 14px; font-family: Arial, sans-serif;">Username:</label>
+    <input type="text" id="uname" name="uname" placeholder="Username" class="form-control" required style="background-color: transparent;
+            margin-bottom: 19px;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+            width: 200px;
+            font-size: 16px;"><br>
 
-<button>Submit</button><br>
-<a href="/register" class="btn btn-primary">Register</a>
-</form>
+    <label for="psswrd" style="text-align: left; margin-bottom: 5px; font-size: 14px; font-family: Arial, sans-serif;">Password:</label>
+    <input type="password" id="psswrd" name="psswrd" placeholder="Password" class="form-control" required style="background-color: transparent;
+            margin-bottom: 19px;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+            width: 200px;
+            font-size: 16px;"><br>
+  </div>
 
-{% for msg in messages %}
-{{ msg }}
-{% endfor %}
+      <button type="submit" class="form-control" style="background-color: transparent; border: 1px solid #006699; color:white; margin:5px; padding:9px; padding-left:25px; padding-right:25px;">Sign in</button>
+      <a href="/register" class="btn btn-primary" style="background-color: transparent; margin-top: 5px; margin:5px; padding:9px; padding-left:25px; padding-right:25px; color:#4dc3ff; text-decoration:none;">Register here.....</a>
+    </form>
 
+      {% for msg in messages %}
+        {{msg}}
+    {% endfor %}
+  </div>
+
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('mouseover', function () {
+      button.style.backgroundColor = '#006699';
+    });
+    button.addEventListener('mouseout', function () {
+      button.style.backgroundColor = '#4dc3ff';
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

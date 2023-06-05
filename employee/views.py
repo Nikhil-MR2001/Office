@@ -2,6 +2,8 @@ from django.contrib import messages, auth
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.shortcuts import render, HttpResponse, redirect
+
+from .forms import EmployeeForm
 from .models import Employee, Role, Department
 from datetime import datetime
 from django.db.models import Q
@@ -33,7 +35,6 @@ def remove_emp(request, id=0):
     emps = Employee.objects.all()
 
     return render(request, 'remove_emp.html', {'emps': emps})
-
 
 def filter_emp(request):
     if request.method == 'POST':
@@ -103,7 +104,7 @@ def login(request):
             auth.login()
             messages.info(request, 'user added')
         else:
-            return HttpResponse(' not valid')
+            messages.error(request, ' not valid')
 
     return render(request, "login.html")
 
@@ -132,3 +133,16 @@ def register(request):
             return redirect('register')
 
     return render(request, 'register.html')
+
+
+def update_emp(request, id=0):
+    if request.method == 'POST':
+        emp = Employee.objects.get(id=id)
+        form = EmployeeForm(request.POST, instance=emp)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        emp = Employee.objects.get(id=id)
+        form = EmployeeForm(instance=emp)
+        return render(request, 'update.html', {'form': form})

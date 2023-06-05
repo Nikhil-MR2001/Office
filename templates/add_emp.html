@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,33 +7,35 @@
     <title>Office Emoloyee Management System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
-<body style="background-color:#003366;">
+<body  style="background-image: url('{% static "pic.jpeg" %}');background-repeat: no-repeat;
+             background-size: cover; -webkit-backdrop-filter: blur(5px);
+             backdrop-filter: blur(5px); height:850px;">
   <div class="container" style="margin-left: 120px; margin-right: 70px;">
     <h1 class="mt-5 text-light" style="text-align: center;">Add an Employee</h1>
     <hr class="bg-light">
 
-    <form action="/add_emp" method="post" class="my-4 p-4 rounded shadow-lg box" style="background-color: #003366; margin: 0 auto; max-width: 400px;">
+    <form action="/add_emp" method="post" class="my-4 p-4 rounded shadow-lg box" style="background-color: transparent; margin: 0 auto; max-width: 400px;">
       {% csrf_token %}
 
       <div class="mb-3">
         <label for="first_name" class="form-label text-light">First Name</label>
-<input type="text" id="first_name" name="first_name" class="form-control" value="{{ first_name }}" style="border: 3px inset #538cc6;">
+<input type="text" id="first_name" name="first_name" class="form-control" value="{{ first_name }}" required style="background-color: transparent;">
       </div>
 
       <div class="mb-3">
         <label for="last_name" class="form-label text-light">Last Name</label>
-        <input type="text" id="last_name" name="last_name" class="form-control" value="{{ last_name }}" style="border: 3px inset #538cc6;">
+        <input type="text" id="last_name" name="last_name" class="form-control" required value="{{ last_name }}" style="background-color: transparent;">
       </div>
 
       <div class="mb-3">
         <label for="salary" class="form-label text-light">Salary</label>
-        <input type="number" id="salary" name="salary" class="form-control" value="{{ salary }}" style="border: 3px inset #538cc6;">
+        <input type="number" id="salary" name="salary" class="form-control" required value="{{ salary }}" style="background-color: transparent;">
       </div>
 
 
       <div class="mb-3">
         <label for="dept" class="form-label text-light">Department</label>
-        <select id="dept" name="dept" class="form-select" style="border: 3px inset #538cc6;">
+        <select id="dept" name="dept" class="form-select" required style="background-color: transparent;">
 
               {% for department in departments %}
       <option value="{{ department.id }}">{{ department.name }}</option>
@@ -41,7 +44,7 @@
 
       <div class="mb-3">
         <label for="role" class="form-label text-light">Role</label>
-        <select id="role" name="role" class="form-select" style="border: 3px inset #538cc6;">
+        <select id="role" name="role" class="form-select" required style="background-color: transparent;">
             {% for role in roles %}
       <option value="{{ role.id }}">{{ role.name }}</option>
       {% endfor %}
@@ -50,17 +53,18 @@
 
       <div class="mb-3">
         <label for="bonus" class="form-label text-light">Bonus</label>
-        <input type="number" id="bonus" name="bonus" class="form-control" value="{{ bonus }}" style="border: 3px inset #538cc6;">
+        <input type="number" id="bonus" name="bonus" class="form-control" value="{{ bonus }}" required style="background-color: transparent;">
       </div>
 
       <div class="mb-3">
         <label for="phone" class="form-label text-light">Phone Number</label>
-        <input type="phone" id="phone" name="phone" class="form-control" value="{{ phone }}" style="border: 3px inset #538cc6;">
+        <input type="phone" id="phone" name="phone" class="form-control" value="{{ phone }}" required style="background-color: transparent;">
       </div>
 
       <hr class="bg-light">
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" style="background-color:transparent; padding-left:40px; padding-right:40px; margin-left:29px;">Submit</button>
+      <button type="reset" class="btn btn-primary" style="background-color:transparent; padding-left:40px; padding-right:40px; margin-left:29px;">Reset</button>
   </form>
 
   </div>

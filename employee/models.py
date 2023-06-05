@@ -1,6 +1,6 @@
-from email.policy import default
 from django.db import models
-
+from django.contrib.auth.models import User
+from django.utils import timezone
 
 # Create your models here.
 
@@ -22,6 +22,7 @@ class Role(models.Model):
 class Employee(models.Model):
     first_name = models.CharField(max_length=100, null=False)
     last_name = models.CharField(max_length=100)
+    # image = models.ImageField(upload_to='media')
     dept = models.ForeignKey(Department, on_delete=models.CASCADE)
     salary = models.IntegerField(default=0)
     bonus = models.IntegerField(default=0)
